@@ -1,0 +1,104 @@
+#contact {
+  padding: 20px;
+  background: linear-gradient(135deg, #050505, #06070b); /* Soft gradient for a fresh look */
+  text-align: center;
+  min-height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  color: #9b9898;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif; /* Smooth and modern font */
+  text-transform: uppercase; /* Add some style to the heading */
+  letter-spacing: 1px;
+}
+
+#contact form {
+  width: 90%; /* Increase form width */
+  max-width: 500px; /* Slightly narrower form */
+  background-color: #e7cccc;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Bigger shadow for more depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+#contact form:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Bigger shadow for effect */
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  border-color: #007bff; /* Highlight border when focused */
+  outline: none;
+}
+
+#contact form button {
+  padding: 10px 20px;
+  background-color: #181918; /* Fresh green color */
+  color: rgb(230, 164, 207);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth color transition and slight animation */
+}
+
+#contact form button:hover {
+  background-color: #8cdef1; /* Darker green on hover */
+  transform: translateY(-3px); /* Button lift effect */
+}
+
+#contact form button:active {
+  transform: translateY(1px); /* Button press effect */
+}
+
+/* Add contact info section styling */
+.contact-info {
+  margin-top: 20px;
+  color: #e7cccc;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.contact-info a {
+  color: #8cdef1;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #contact form {
+    width: 90%; /* Adjust form for smaller screens */
+  }
+
+  #contact form input,
+  #contact form textarea {
+    font-size: 0.9rem; /* Slightly smaller text on mobile */
+  }
+}

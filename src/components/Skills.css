@@ -1,0 +1,120 @@
+/* src/components/Skills.css */
+#skills {
+  padding: 50px;
+  background-color: #030303;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+#skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 40%, transparent 60%);
+  z-index: 0;
+  animation: gradientAnimation 3s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  50% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(-100%, -100%);
+  }
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 3px;
+  z-index: 1;
+}
+
+.skills-section {
+  margin: 20px 10px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid #00796b;
+}
+
+.skills-section h3 {
+  color: #00796b;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
+
+.skills-section ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills-section ul li {
+  font-size: 1.3rem;
+  color: #555;
+  background-color: #f0f0f0;
+  margin: 8px 20px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.skills-section ul li:hover {
+  background-color: #00796b;
+  color: white;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  #skills {
+    padding: 20px;
+  }
+
+  #skills h2 {
+    font-size: 2rem;
+  }
+
+  .skills-section {
+    padding: 15px;
+  }
+
+  .skills-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .skills-section ul li {
+    font-size: 1.1rem;
+  }
+}

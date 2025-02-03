@@ -1,0 +1,32 @@
+.navbar {
+  
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: rgb(130, 12, 53);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}

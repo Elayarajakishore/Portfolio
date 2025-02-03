@@ -1,0 +1,51 @@
+#service {
+  background-color: #090909;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+#service h2 {
+  font-size: 2.5rem; /* Increased size for emphasis */
+  color: #dcdcdc;
+  margin-bottom: 30px; /* Added space below the heading */
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  text-transform: uppercase; /* Stylized heading */
+  letter-spacing: 1.5px;
+}
+
+#service ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid layout for responsive design */
+  gap: 20px; /* Space between items */
+}
+
+#service li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #555;
+  padding: 15px;
+  border-radius: 8px; /* Rounded list item */
+  background-color: #222; /* Darker background for list items */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#service li:hover {
+  background-color: #444; /* Lighter background on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+@media (max-width: 768px) {
+  #service h2 {
+    font-size: 2rem; /* Adjust font size for mobile */
+  }
+  
+  #service li {
+    font-size: 1rem; /* Adjust list item font size for mobile */
+  }
+}

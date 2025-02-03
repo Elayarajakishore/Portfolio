@@ -1,0 +1,105 @@
+.projects {
+  padding: 20px;
+  background: linear-gradient(135deg, #000000, #0b070c); /* 3D-like gradient */
+  text-align: center;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  width: 100%; /* Ensure it spans the full width */
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  position: relative;
+  overflow: hidden;
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Add space between projects */
+}
+
+.project {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden; /* Hide anything that overflows */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for zoom and shadow */
+  cursor: pointer; /* Make cursor a pointer to indicate interaction */
+}
+
+.project:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.project h3 {
+  font-size: 1.8rem;
+  color: #004d40;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.project:hover h3 {
+  color: #00796b; /* Change color on hover */
+}
+
+.project p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transform: translateY(20px);
+  padding-top: 10px;
+}
+
+.project:hover p {
+  opacity: 1;
+  transform: translateY(0); /* Reveal description with a smooth transition */
+}
+
+/* Background animation */
+@keyframes bgAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+.projects {
+  animation: bgAnimation 10s linear infinite; /* Create a subtle background animation */
+  background-size: 400% 400%;
+}
+
+/* Animation for project cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  color: #00796b;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out; /* Fade in the heading */
+}

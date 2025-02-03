@@ -1,0 +1,118 @@
+#about {
+    padding: 20px;
+    background: url('../assets/images/bgimg.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top instead of centering vertically */
+    align-items: center; /* Center content horizontally */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    position: relative;
+    overflow: hidden; /* Prevent any overflow if elements go beyond the container */
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative; /* Ensure container is above the background */
+    z-index: 1;
+    animation: fadeIn 1.5s ease-in-out; /* Animation for smooth appearance */
+  }
+  
+  .profile-image {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: slideUp 1.5s ease-in-out; /* Animation for profile image */
+  }
+  
+  .profile-pic {
+    width: 150px; /* Passport size width */
+    height: 200px; /* Passport size height */
+    border-radius: 20px; /* Rounded edges */
+    object-fit: cover; /* Ensure the image fits the box */
+    margin-bottom: 20px; /* Space below the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    border: 2px solid #ccc; /* Optional border for a clean look */
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  .intro {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Text shadow for better visibility */
+  }
+  
+  #about h2 {
+    font-size: 2.5rem;
+    color: #facdcd;
+    margin: 20px 0;
+    animation: fadeIn 1.5s ease-in-out; /* Animation for heading */
+  }
+  
+  #about p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 10px auto;
+    animation: fadeIn 1.5s ease-in-out; /* Animation for paragraph */
+  }
+  
+  .social-links {
+    margin-top: 30px;
+  }
+  
+  .social-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Hover effect */
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for icon hover */
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Shadow effect on hover */
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Start with a small upward movement */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End with normal position */
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px); /* Start below the normal position */
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
